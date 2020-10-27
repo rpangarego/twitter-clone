@@ -5,7 +5,19 @@ function SidebarOption({ active, Icon, text }) {
   return (
     <div className={`sidebarOption ${active && `sidebarOption--active`}`}>
       <Icon />
-      <h2>{text}</h2>
+      {text === "Profile" ? (
+        <h2>
+          <a
+            href="https://rpangarego.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {text}
+          </a>
+        </h2>
+      ) : (
+        <h2>{text}</h2>
+      )}
     </div>
   );
 }

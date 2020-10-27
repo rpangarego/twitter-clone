@@ -1,52 +1,70 @@
-.post{
-display: flex;
-align-items: flex-start;
-border-bottom: 1px solid var(--twitter-background);
-padding-bottom: 10px;
+.post {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--twitter-background);
+  padding: 10px;
+}
 
+.post__header {
+  padding-top: 10px;
+}
+
+.post__headerText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .post__headerText h3 {
-   margin-bottom:0;
+  margin: 0;
 }
 
-.post__headerDescription p{
-   margin-top: 0;
+.post__headerText > .MuiSvgIcon-root {
+  color: rgba(255, 38, 38, 0.671);
 }
 
-.post__body{
-   width:100%;
-   margin-right: 2rem;
+.post__body {
+  width: 100%;
+  margin-right: 2rem;
 }
 
-.post__body > img{
-   flex:1;
-   border-radius: 10px;
-   max-width: 450px;
+.post__body > img {
+  flex: 1;
+  border-radius: 10px;
+  max-width: 450px;
+  margin-bottom: 15px;
 }
 
-.post__footer{
-   display:flex;
-   justify-content: space-between;
-   margin-top: 20px;
+.post__footer {
+  display: flex;
+  justify-content: space-between;
 }
 
-.post__badge{
-   font-size: 1.2rem !important;
-   color: var(--twitter-color);
+.post__badge {
+  font-size: 1.2rem !important;
+  color: var(--twitter-color);
 }
-.post__headerSpecial{
-   font-weight: 600;
-   font-size: 12px;
-   color:gray;
-}
-
-.post__headerText{
-   display:flex;
-   align-items: center;
-} 
-
-.post__avatar{
-   padding: 20px;
+.post__headerSpecial {
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
 }
 
+.post__headerText {
+  display: flex;
+  align-items: center;
+}
+
+.post__avatar {
+  padding: 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .post {
+    max-width: 70vw;
+  }
+
+  .post__body > img {
+    max-width: 50vw;
+  }
+}
